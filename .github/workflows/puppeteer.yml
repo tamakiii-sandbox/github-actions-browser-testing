@@ -25,3 +25,6 @@ jobs:
 
       - name: Run
         run: node src/main.js
+
+      - name: Make
+        run: make
