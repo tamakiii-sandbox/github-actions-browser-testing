@@ -1,5 +1,7 @@
 .PHONY: help install start test clean
 
+START_TIMEOUT := 10
+
 help:
 	@cat $(firstword $(MAKEFILE_LIST))
 
@@ -7,7 +9,7 @@ install: \
 	node_modules
 
 start:
-	timeout 10 npx --no-install http-server -a 0.0.0.0 -p 3030 test &
+	timeout $(START_TIMEOUT) npx --no-install http-server -a 0.0.0.0 -p 3030 test &
 	sleep 3
 
 test:
