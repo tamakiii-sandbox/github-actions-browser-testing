@@ -1,4 +1,4 @@
-.PHONY: help install start test clean
+.PHONY: help install server test clean
 
 help:
 	@cat $(firstword $(MAKEFILE_LIST))
@@ -6,8 +6,8 @@ help:
 install: \
 	node_modules
 
-start:
-	npx --no-install http-server -a 0.0.0.0 -p 3030 test
+server:
+	timeout 5 npx --no-install http-server -a 0.0.0.0 -p 3030 test &
 
 test:
 	node src/main.js
