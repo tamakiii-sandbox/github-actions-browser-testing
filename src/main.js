@@ -15,7 +15,7 @@ const puppeteer = require('puppeteer');
     return {
       title: document.title,
       url: location.href,
-      search:  location.search,
+      search: location.search,
     }
   })
 
