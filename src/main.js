@@ -13,11 +13,17 @@ const puppeteer = require('puppeteer');
 
   const results = await page.evaluate(() => {
     return {
-      title: document.title
+      title: document.title,
+      url: location.href,
+      search:  location.search,
     }
   })
 
+  var search = new URLSearchParams(results.search)
+
   console.log('title', results.title)
+  console.log('url', results.url)
+  console.log(search)
 
   await browser.close()
 })()
