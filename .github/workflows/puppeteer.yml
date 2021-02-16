@@ -20,11 +20,5 @@ jobs:
         with:
           node-version: '15.x'
 
-      - name: install
-        run: npm install --include=dev
-
-      - name: Run
-        run: node src/main.js
-
-      - name: Make
-        run: make
+      - name: Test
+        run: make -f github-actions.mk test
