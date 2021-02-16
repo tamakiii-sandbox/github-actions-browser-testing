@@ -7,7 +7,7 @@ install: \
 	node_modules
 
 start:
-	timeout 5 npx --no-install http-server -a 0.0.0.0 -p 3030 test &
+	npx --no-install http-server -a 0.0.0.0 -p 3030 test
 
 test:
 	node src/main.js

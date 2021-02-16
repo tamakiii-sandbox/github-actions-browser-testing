@@ -21,6 +21,5 @@ jobs:
           node-version: '15.x'
 
       - run: make -f github-actions.mk install
-      - run: |
-          make -f github-actions.mk start
-          make -f github-actions.mk test
+      - run: timeout 3 make -f github-actions.mk start
+      - run: make -f github-actions.mk test
