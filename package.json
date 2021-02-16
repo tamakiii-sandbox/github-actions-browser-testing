@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tamakiii-sandbox/github-actions-browser-testing/issues"
   },
-  "homepage": "https://github.com/tamakiii-sandbox/github-actions-browser-testing#readme"
+  "homepage": "https://github.com/tamakiii-sandbox/github-actions-browser-testing#readme",
+  "dependencies": {
+    "puppeteer": "^7.1.0"
+  }
 }
