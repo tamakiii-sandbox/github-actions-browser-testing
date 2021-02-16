@@ -6,8 +6,10 @@ help:
 install: \
 	node_modules
 
-test:
+start:
 	timeout 5 npx --no-install http-server -a 0.0.0.0 -p 3030 test &
+
+test:
 	node src/main.js
 
 node_modules:
