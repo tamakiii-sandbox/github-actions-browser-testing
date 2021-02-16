@@ -22,5 +22,4 @@ jobs:
 
       - run: make -f github-actions.mk install
       - run: make -f github-actions.mk start
-      - run: sleep 3
       - run: make -f github-actions.mk test
